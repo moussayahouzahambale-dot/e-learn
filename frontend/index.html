@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learn | Accueil</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-page="home">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="/index.html" class="logo">
+          <span class="logo-badge">E</span>
+          E-Learn
+        </a>
+        <div class="nav-links">
+          <a href="/index.html">Accueil</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/courses.html">Cours</a>
+          <span id="authSpot"></span>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Developpez vos competences avec des cours modernes.</h1>
+          <p>
+            Explorez des categories, trouvez rapidement le bon cours et suivez vos lecons pas a pas avec une experience fluide.
+          </p>
+          <div class="search-wrapper">
+            <input id="homeSearchInput" type="text" placeholder="Rechercher un cours par titre..." />
+            <button id="homeSearchBtn" type="button">Rechercher</button>
+          </div>
+        </div>
+        <article class="hero-card">
+          <h3>Pourquoi E-Learn ?</h3>
+          <p>Contenu structure par niveau, categories claires, recherche instantanee et gestion complete via dashboard admin.</p>
+        </article>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h2 class="section-title">Cours recents</h2>
+        <div id="loader" class="loader"></div>
+        <section id="homeCourses" class="grid"></section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <footer class="footer">E-Learn - Plateforme e-learning moderne</footer>
+    <script src="/script.js"></script>
+  </body>
+</html>

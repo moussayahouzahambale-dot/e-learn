@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learn | Cours</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-page="courses">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="/index.html" class="logo"><span class="logo-badge">E</span>E-Learn</a>
+        <div class="nav-links">
+          <a href="/index.html">Accueil</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/courses.html">Cours</a>
+          <span id="authSpot"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section">
+      <div class="container">
+        <h1 class="section-title">Catalogue des cours</h1>
+
+        <section class="filters">
+          <input id="courseSearchInput" class="input" type="text" placeholder="Recherche en temps reel..." />
+          <select id="categoryFilter"></select>
+          <select id="levelFilter">
+            <option value="">Tous les niveaux</option>
+            <option value="debutant">Debutant</option>
+            <option value="intermediaire">Intermediaire</option>
+            <option value="avance">Avance</option>
+          </select>
+        </section>
+
+        <div id="loader" class="loader"></div>
+        <section id="coursesList" class="grid"></section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>

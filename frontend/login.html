@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learn | Connexion</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-page="login">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="/index.html" class="logo"><span class="logo-badge">E</span>E-Learn</a>
+        <div class="nav-links">
+          <a href="/index.html">Accueil</a>
+          <a href="/courses.html">Cours</a>
+          <span id="authSpot"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="auth-wrap">
+      <section class="auth-card">
+        <h1>Connexion</h1>
+        <form id="loginForm">
+          <input class="input" name="email" type="email" placeholder="Email" required />
+          <input class="input" name="password" type="password" placeholder="Mot de passe" required />
+          <button class="btn" type="submit">Se connecter</button>
+        </form>
+        <p style="margin-top:0.8rem">Pas encore de compte ? <a href="/register.html" style="color:#2563eb">Inscription</a></p>
+        <div id="loader" class="loader"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learn | Lecons</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-page="lesson">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="/index.html" class="logo"><span class="logo-badge">E</span>E-Learn</a>
+        <div class="nav-links">
+          <a href="/index.html">Accueil</a>
+          <a href="/categories.html">Categories</a>
+          <a href="/courses.html">Cours</a>
+          <span id="authSpot"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section">
+      <div class="container" style="display:grid;grid-template-columns:300px 1fr;gap:1rem">
+        <aside class="form-card">
+          <h2>Lecons du cours</h2>
+          <div id="loader" class="loader"></div>
+          <div id="lessonList" style="margin-top:1rem"></div>
+        </aside>
+        <section id="lessonDetails"></section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>

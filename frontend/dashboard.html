@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Learn | Dashboard Admin</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body data-page="dashboard">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="/index.html" class="logo"><span class="logo-badge">E</span>E-Learn</a>
+        <div class="nav-links">
+          <a href="/index.html">Accueil</a>
+          <a href="/courses.html">Cours</a>
+          <a href="/dashboard.html">Dashboard</a>
+          <span id="authSpot"></span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section" id="dashboardRoot">
+      <div class="container" style="display:grid;gap:1rem">
+        <h1 class="section-title">Administration</h1>
+        <div id="loader" class="loader"></div>
+
+        <section class="form-card">
+          <h2>Ajouter une categorie</h2>
+          <form id="categoryForm" class="form-grid">
+            <input class="input" name="name" placeholder="Nom categorie" required />
+            <input class="input" name="description" placeholder="Description" />
+            <button class="btn" type="submit">Ajouter</button>
+          </form>
+          <div id="categoriesAdminList" class="list" style="margin-top:1rem"></div>
+        </section>
+
+        <section class="form-card">
+          <h2>Ajouter un cours</h2>
+          <form id="courseForm" class="form-grid">
+            <input class="input" name="title" placeholder="Titre" required />
+            <input class="input" name="description" placeholder="Description" required />
+            <select name="category" id="courseCategory" required></select>
+            <select name="level" required>
+              <option value="debutant">Debutant</option>
+              <option value="intermediaire">Intermediaire</option>
+              <option value="avance">Avance</option>
+            </select>
+            <button class="btn" type="submit">Ajouter</button>
+          </form>
+          <div id="coursesAdminList" class="list" style="margin-top:1rem"></div>
+        </section>
+
+        <section class="form-card">
+          <h2>Ajouter une lecon</h2>
+          <form id="lessonForm" class="form-grid">
+            <input class="input" name="title" placeholder="Titre lecon" required />
+            <textarea class="input" name="content" placeholder="Contenu" required></textarea>
+            <textarea class="input" name="codeExample" placeholder="Code exemple"></textarea>
+            <textarea class="input" name="exercise" placeholder="Exercice"></textarea>
+            <select name="course" id="lessonCourse" required></select>
+            <button class="btn" type="submit">Ajouter</button>
+          </form>
+          <div id="lessonsAdminList" class="list" style="margin-top:1rem"></div>
+        </section>
+      </div>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/script.js"></script>
+  </body>
+</html>
